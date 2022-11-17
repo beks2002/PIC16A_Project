@@ -2,10 +2,11 @@
 
 #### Rabiga Arip, Euibin Kim, Nicholas Olmedo
 
-- The ***<u>objective</u>*** of this project is to implement a movie/tv-show recommendation algorithm based on qualitative/quantitative data. The algorithm would recommend similar TV shows and movies based on an initial input.
-  
+### OBJECTIVE
+To implement a movie/tv-show recommendation algorithm based on qualitative/quantitative data. The algorithm would recommend similar TV shows and movies based on an initial input.
 
-### V <= Need to be done once we finish the project
+
+### Need to be done once we finish the project
 
 List of Python packages **(Let's do this once we finish the project)**
 
