@@ -20,4 +20,4 @@ List of Python packages **(Let's do this once we finish the project)**
   
 - Background and source of the dataset
   
-- LInks to any tutorials you used, andat least 3 specific things you implemented that differentiates your project from what's already in the tutorial 
+- Links to any tutorials you used, andat least 3 specific things you implemented that differentiates your project from what's already in the tutorial 
