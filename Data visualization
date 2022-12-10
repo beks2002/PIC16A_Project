@@ -1,0 +1,44 @@
+import string
+import numpy as np
+import pandas as pd
+import sklearn
+import warnings
+import seaborn as sns
+warnings.filterwarnings('ignore')
+
+from matplotlib import pyplot as plt
+df = pd.read_csv('netflix_titles.csv')
+
+
+fig,ax = plt.subplots(figsize = (10,10))
+title = 'Top 10 Movie and TV show ratings'
+#groupby ratings and tv show vs movie
+df_type_rating = df.groupby(['type','rating']).count().show_id.reset_index().sort_values(by = 'show_id').tail(10)
+#plot
+plots = sns.barplot(data = df_type_rating, x='type',y = 'show_id', hue = 'rating', palette='muted')
+#annotate the graph
+for bar in plots.patches:
+        plots.annotate(format(bar.get_height(), '.0f'), 
+                   (bar.get_x() + bar.get_width() / 2, 
+                    bar.get_height() - (bar.get_height())/2), ha='center', va='center',
+                   size=15, xytext=(0, 0),bbox=dict(boxstyle="round4,pad=0.6", fc="w", ec="red", lw=3),
+                   textcoords='offset points')
+        plt.box(on=None)
+        plt.title(title, fontsize = 15, color = 'black')
+        plt.xlabel('Type')
+        plt.ylabel('Count')
+
+
+movie = df.copy()
+movie = movie[movie['type'] == 'Movie']
+movie['minute'] = movie.duration.apply(lambda x: 0 if str(x) == 'nan' else int(str(x).replace(' min','')))
+duration_year = movie.groupby(['release_year']).mean().sort_values('minute')
+duration_year = duration_year.sort_index()
+
+title = "YoY Trends of Movie's Duration"
+_ = plt.figure(figsize=(15,6))
+_ = sns.lineplot(x=duration_year.index, y=duration_year.minute.values)
+_ = plt.box(on=None)
+_ = plt.ylabel('Average movie duration in minutes');
+_ = plt.xlabel('Year of release');
+_ = plt.title(title, fontsize=20, color='blue');
