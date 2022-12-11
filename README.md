@@ -118,6 +118,7 @@ To implement a movie/tv-show recommendation algorithm based on qualitative/quant
 
 plotter = MovieTVShowPlotter(df, 'Top 10 Movie and TV show ratings', "svg") #instance of MovieTVShowPlotter
 plotter.plot() 
+
 <img width="711" alt="Screen Shot 2022-12-12 at 8 26 37 AM" src="https://user-images.githubusercontent.com/63583602/206935206-3359ba00-c544-44f7-8943-f3a5839d7c8e.png">
 
 plotter.plot2()
