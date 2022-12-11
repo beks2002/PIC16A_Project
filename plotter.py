@@ -9,6 +9,19 @@ import seaborn as sns
 warnings.filterwarnings('ignore')
 
 from matplotlib import pyplot as plt
+"""
+This class contains methods for visualizing data about movies and TV shows.
+
+Attributes:
+    df (pandas.DataFrame): A dataframe containing information about movies and TV shows.
+    title (str): The title for the plot.
+    img_fmt (str): The image format for the plot.
+
+Methods:
+    plot(): Creates a barplot of the 10 most popular movie or TV show types, grouped by ratings.
+    plot_top_countries(): Creates a barplot of the top countries where the movies or TV shows were produced.
+    plot2(): Creates a barplot of the top 10 most productive directors.
+"""
 
 class MovieTVShowPlotter:
   def __init__(self, df, title, img_fmt):
