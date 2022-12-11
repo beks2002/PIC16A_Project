@@ -70,7 +70,7 @@ To implement a movie/tv-show recommendation algorithm based on qualitative/quant
 
 2. recommendation2 function takes multiple titles as an input
 
-3. The data visualization is mainly cointed in one custom class, that has three different defintions other than _init_
+3. The data visualization is mainly contained in one custom class, that has three different defintions other than _init_
 
 ### 
 
@@ -103,3 +103,27 @@ To implement a movie/tv-show recommendation algorithm based on qualitative/quant
 - **listed_in**: Genre
 
 - **description**: The summary description
+
+### VI. Description of Demo file
+- recommendation(title, total_results, options)
+  options: list of options
+    can choose from 'country', 'rating', 'type', year_range >= 0 in any order
+   
+  Output: Similar movie(s): 
+         Similar Tv-show(s): 
+         
+  The amount of reccomendations that are outputted varies. The output is reccomendations most similar to the original input, based on the categories of 'country', 'rating', 'type', year_range >= 0 
+  
+- For the data visualization, to call the functions defined in the MovieTVShowPlotter class. First make an instance of the class, and then call that instance with the defintion. 
+
+plotter = MovieTVShowPlotter(df, 'Top 10 Movie and TV show ratings', "svg") #instance of MovieTVShowPlotter
+plotter.plot() 
+<img width="711" alt="Screen Shot 2022-12-12 at 8 26 37 AM" src="https://user-images.githubusercontent.com/63583602/206935206-3359ba00-c544-44f7-8943-f3a5839d7c8e.png">
+
+plotter.plot2()
+<img width="1154" alt="Screen Shot 2022-12-12 at 8 27 29 AM" src="https://user-images.githubusercontent.com/63583602/206935239-78f13219-706b-4f85-a78c-80a3d5315312.png">
+
+
+
+
+- 
