@@ -20,22 +20,22 @@ To implement a movie/tv-show recommendation algorithm based on qualitative/quant
 
 - matplotlib (3.5.2)
 
+- seaborn (0.12.1)
 
 
 ### III. Scope and Limitations
 
 ##### Ethical implications
 
-- 
+- The reccomendation algorithm caters to the preferences of the individual, which may result in a more pleasant viewing experience for the viewer. However, there are also potential negative implications of recommendation algorithms. One concern is that the algorithm may reinforce existing biases and stereotypes. For example, if the algorithm is trained on data that reflects the viewing habits of a predominantly white, male audience, it may end up recommending more content that appeals to that demographic and less content that appeals to other demographics. This could result in a lack of representation and opportunities for underrepresented groups. Another potential concern is that recommendation algorithms may create filter bubbles, where users are only shown content that aligns with their existing beliefs and preferences. This can limit exposure to new ideas and perspectives, and lead to confirmation bias. 
 
 ##### Accessibility concerns
 
-- 
+- The reccomendation algorithm relies heavily on visual elements and therefore might not be accessible for people with visual impairements. For instance, people who are blind may not recieve the same utility from the algorithm as someone with better vision. Individuals with hearing impairments may also may not be able to fully benefit from the algorithm. 
 
 ##### Potential extensions
 
-- 
-
+- Potential extensions in this reccomendation algorithm, would be to personalize the algorithm by adding information from the user's social media posts, search history as well as tweets. It can also be extended to include data from popular film critiques. 
 
 
 ### IV. References/Acknowledgement/Tutorials
@@ -68,7 +68,9 @@ To implement a movie/tv-show recommendation algorithm based on qualitative/quant
    
    - year_range (Non-negative integer) - outputs are limited to shows/movies released in [the input's release year +/- year_range]
 
-2- recommendation2 function takes multiple titles as an input
+2. recommendation2 function takes multiple titles as an input
+
+3. The data visualization is mainly cointed in one custom class, that has three different defintions other than _init_
 
 ### 
 
